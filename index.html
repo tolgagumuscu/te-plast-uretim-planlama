@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TE PLAST Üretim Asistanı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- DHTMLX Gantt Chart CSS -->
+    <link href="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.css" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#0A2342', // Dark blue for text and main elements
+              'brand-secondary': '#1E3A5F', // A slightly lighter blue
+              'brand-accent': '#2563eb', // A brighter blue for interaction
+              'brand-bg': '#f8fafc', // Light slate background
+            },
+            fontFamily: {
+              sans: ['"Exo 2"', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+<!-- SheetJS library for Excel parsing -->
+<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+<!-- DHTMLX Gantt Chart JS -->
+<script src="https://cdn.dhtmlx.com/gantt/edge/dhtmlxgantt.js"></script>
+<style>
+    /* Custom Gantt Task Colors */
+    .gantt_task_line.machine_1 { background-color: #3b82f6; border-color: #2563eb; }
+    .gantt_task_line.machine_1.gantt_project { background-color: #3b82f6; }
+    .gantt_task_line.machine_2 { background-color: #10b981; border-color: #059669; }
+    .gantt_task_line.machine_2.gantt_project { background-color: #10b981; }
+    .gantt_task_line.machine_3 { background-color: #ef4444; border-color: #dc2626; }
+    .gantt_task_line.machine_3.gantt_project { background-color: #ef4444; }
+    .gantt_task_line.machine_4 { background-color: #f97316; border-color: #ea580c; }
+    .gantt_task_line.machine_4.gantt_project { background-color: #f97316; }
+    .gantt_task_line.machine_5 { background-color: #8b5cf6; border-color: #7c3aed; }
+    .gantt_task_line.machine_5.gantt_project { background-color: #8b5cf6; }
+    .gantt_task_line.machine_6 { background-color: #ec4899; border-color: #db2777; }
+    .gantt_task_line.machine_6.gantt_project { background-color: #ec4899; }
+    .gantt_task_progress { background-color: rgba(255, 255, 255, 0.3); }
+
+    /* Overdue Task Style */
+    .gantt_task_line.overdue {
+        border: 2px solid #b91c1c; /* Thicker, darker red border */
+    }
+
+    /* Custom Select Styling */
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>');
+        background-repeat: no-repeat;
+        background-position: right 0.5rem center;
+        background-size: 1.25em 1.25em;
+        padding-right: 2rem;
+    }
+
+    /* Job Detail Modal Styling */
+    .modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+    .modal-content {
+        background-color: white;
+        padding: 24px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 600px;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
+    }
+    .modal-close-button {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #6b7280;
+    }
+    .modal-close-button:hover {
+      color: #1f2937;
+    }
+
+</style>
+<link rel="stylesheet" href="/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.28.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/te-plast-uretim-planlama/assets/index-CcE73Wbe.js"></script>
+</head>
+  <body class="bg-brand-bg font-sans">
+    <div id="root"></div>
+  </body>
+</html>
