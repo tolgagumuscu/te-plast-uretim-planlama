@@ -1,0 +1,5 @@
+{
+  "name": "TE PLAST Üretim Asistanı (Tarih Düzgün)",
+  "description": "An interactive chat application that allows users to ask questions about a plastic injection machine production plan. The app uses AI to provide low-latency, conversational answers based on the provided production data.",
+  "requestFramePermissions": []
+}
